@@ -1,1 +1,1 @@
-"web: gunicorn myproject.wsgi --log-file -"
+web: gunicorn funcionarios.wsgi --log-file
