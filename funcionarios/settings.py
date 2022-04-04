@@ -13,10 +13,13 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 from pathlib import Path
 import django_heroku
+import dj_database_url
 from dj_database_url import parse as dburl
 from decouple import config, Csv
 
 # Diretório raíz
+from django.conf.global_settings import DATABASES
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECRET_KEY do Django (utilize alguma ferramenta para desacoplar seu código)
@@ -77,9 +80,8 @@ WSGI_APPLICATION = 'funcionarios.wsgi.application'
 
 # Banco de dados
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl, conn_max_age=500),
-}
+# DATABASES = {'default': config('DATABASE_URL', default=default_dburl, cast=dburl),}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 # Validadores de senha
