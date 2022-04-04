@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 from pathlib import Path
-import django_on_heroku
+import django_heroku
 from dj_database_url import parse as dburl
 from decouple import config, Csv
 
@@ -100,4 +100,4 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-django_on_heroku.settings(locals())
+django_heroku.settings(locals())
