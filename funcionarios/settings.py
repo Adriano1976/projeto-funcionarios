@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'funcionarios.wsgi.application'
 # Banco de dados
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
+    'default': config('DATABASE_URL', default=default_dburl, cast=dburl, conn_max_age=500),
 }
 
 
