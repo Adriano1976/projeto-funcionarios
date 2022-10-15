@@ -1,6 +1,16 @@
-# Helloworld, Django
+# Projeto Controle de Funcionário - Django
 
-Código produzido como parte do artigo sobre Desenvolvimento Web com Django da Python Academy. 
+Nesse projeto foi usado o Framework Django no Pycharm e produzido como parte do artigo sobre Desenvolvimento Web com Django da Python Academy. Para criar esse projeto, foi seguido um roteiro de passo a passo para facilitar a produção do projeto da seguinte forma: 
+* Criar my-project no Heroku. 
+* Instalar heroki-cli.
+* Fazer login e associar o projeto local com o remoto.
+* Preparando as dependências para instalar no Heroku.
+* Instalando o Gunicorn para servir a aplicação no Heroku e django-on-heroku.
+* Determinando a versão do python executada no Heroku.
+* Configurando o arquivo Procfile + Dica extra.
+* Fazendo o Deploy.
+* Executando o migrate e criar um superuser.
+* Desacoplando variáveis específicas de ambiente com o python-decouple.
 [Acesse aqui](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao) 
 e saiba mais!
 
